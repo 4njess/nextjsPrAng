@@ -1,0 +1,218 @@
+<div class="valueSection">
+  <h3>Объекты:</h3>
+    <div class="sections">
+      <div class="sectionA">
+         <details>
+          <summary><h4 class="Header">[Channels]:</h4></summary>
+            <div>
+              <div class="values" *ngFor="let item of conf.Channels; let key = index">
+                <h4>{{key}}:</h4>
+                  <div class="values">
+                    <p>AllowedArchive: {{item.AllowedArchive}}</p>
+                    <p>AllowedRealtime: {{item.AllowedRealtime}}</p>
+                    <p>ArchiveMode: {{item.ArchiveMode}}</p>
+                    <p>ArchiveRotationMode: {{item.ArchiveRotationMode}}</p>
+                    <p>ArchiveStreamType: {{item.ArchiveStreamType}}</p>
+                    <p>ArchiveVideoFormat: {{item.ArchiveVideoFormat}}</p>
+                    <p>AttachedToServer: {{item.AttachedToServer}}</p>
+                    <p>Description: {{item.Description}}</p>
+                    <p>DeviceInfo: {{item.DeviceInfo}}</p>
+                    <p>GeoPosition: {{item.GeoPosition}}</p>
+                    <p>Id: {{item.Id}}</p>
+                    <p>IsArchivingEnabled: {{item.IsArchivingEnabled}}</p>
+                    <p>IsDisabled: {{item.IsDisabled}}</p>
+                    <p>IsFaceRecOn: {{item.IsFaceRecOn}}</p>
+                    <p>IsObjectCountingOn: {{item.IsObjectCountingOn}}</p>
+                    <p>IsPeopleCountingOn: {{item.IsPeopleCountingOn}}</p>
+                    <p>IsPtzOn: {{item.IsPtzOn}}</p>
+                    <p>IsSoundArchivingEnabled: {{item.IsSoundArchivingEnabled}}</p>
+                    <p>IsSoundOn: {{item.IsSoundOn}}</p>
+                    <p>IsTransmitSoundOn: {{item.IsTransmitSoundOn}}</p>
+                    <p>Name: {{item.Name}}</p>
+                    <details>
+                      <summary class="insideHeader"><p>[ Streams ]:</p></summary>
+                        <div class="values" *ngFor="let item of item.Streams; let key = index">
+                          <p>{{key}}:</p>
+                          <div class="values">
+                            <p>RotationMode: {{item.RotationMode}}</p>
+                            <p>StreamFormat: {{item.StreamFormat}}</p>
+                            <p>StreamType: {{item.StreamType}}</p>
+                          </div>
+                        </div>
+                    </details>
+                    <p>TimeZoneOffset: {{item.TimeZoneOffset}}</p>
+                    <details>
+                      <summary class="insideHeader"><p>[ UserScenarios ]:</p></summary>
+                        <div class="values" *ngFor="let item of item.UserScenarios; let key = index">
+                          <p>{{key}}: {{item}}</p>
+                        </div>
+                    </details>
+                  </div>
+              </div>
+            </div>
+        </details>
+        <details>
+          <summary class="Header"><h4>[Servers]:</h4></summary>
+            <div class="values">
+              <div class="values" *ngFor="let item of conf.Servers; let key = index">
+                <p>{{key}}:</p>
+                  <div class="values">
+                    <p>ConnectionUrl: {{item.ConnectionUrl}}</p>
+                    <p>Id: {{item.Id}}</p>
+                    <p>Name: {{item.Name}}</p>
+                    <p>PrimaryIp: {{item.PrimaryIp}}</p>
+                    <p>PrimaryPort: {{item.PrimaryPort}}</p>
+                    <p>PrimarySslPort: {{item.PrimarySslPort}}</p>
+                    <p>SecondaryIp: {{item.SecondaryIp}}</p>
+                    <p>SecondaryPort: {{item.SecondaryPort}}</p>
+                    <p>SecondarySslPort: {{item.SecondarySslPort}}</p>
+                    <p>Url: {{item.Url}}</p>
+                  </div>
+              </div>
+            </div>
+        </details>
+      </div>
+      <div class="sectionB">
+        <details>
+          <summary class="Header"><h4>MobileDevicesCapabilities:</h4></summary>
+            <div class="values">
+              <p>AndroidMobilePush: {{mdc.AndroidMobilePush}}<p>
+              <p>AppleMobilePush: {{mdc.AppleMobilePush}}<p>
+              <p>Archive: {{mdc.Archive}}<p>
+              <p>Gis: {{mdc.Gis}}<p>
+              <p>Hls: {{mdc.Hls}}<p>
+              <p>Profiles: {{mdc.Profiles}}<p>
+              <p>Ptz: {{mdc.Ptz}}<p>
+              <p>SmartAssistant: {{mdc.SmartAssistant}}<p>
+              <p>UserScenarios: {{mdc.UserScenarios}}<p>
+              <p>AndroidMobilePush: {{mdc.AndroidMobilePush}}<p>
+              <p>AppleMobilePush: {{mdc.AppleMobilePush}}<p>
+              <p>Archive: {{mdc.Archive}}<p>
+              <p>Gis: {{mdc.Gis}}<p>
+              <p>Hls: {{mdc.Hls}}<p>
+              <p>Profiles: {{mdc.Profiles}}<p>
+              <p>Ptz: {{mdc.Ptz}}<p>
+              <p>SmartAssistant: {{mdc.SmartAssistant}}<p>
+              <p>UserScenarios: {{mdc.UserScenarios}}<p>
+            </div>
+        </details>
+        <details>
+          <summary class="Header"><h4>MobileServerInfo:</h4></summary>
+          <div class="values">
+            <p>FpsLimit: {{msi.FpsLimit}}</p>
+            <p>HighResolution: {{msi.HighResolution}}</p>
+            <p>IsEnabled: {{msi.IsEnabled}}</p>
+            <p>IsMobilePushEnabled: {{msi.IsMobilePushEnabled}}</p>
+            <p>IsProxyEnabled: {{msi.IsProxyEnabled}}</p>
+            <p>LowResolution: {{msi.LowResolution}}</p>
+            <p>MiddleResolution: {{msi.MiddleResolution}}</p>
+            <details>
+              <summary class="insideHeader"><p>[ Resolutions ]:</p></summary>
+                <div class="values" *ngFor="let item of msi.Resolutions; let key = index">
+                  <p>{{key}}:</p>
+                  <div class="values">
+                    <p>FpsLimit: {{item.FpsLimit}}</p>
+                    <p>Height: {{item.Height}}</p>
+                    <p>IsEnabled: {{item.IsEnabled}}</p>
+                    <p>Type: {{item.Type}}</p>
+                    <p>UsePFrames: {{item.UsePFrames}}</p>
+                    <p>Width: {{item.Width }}</p>
+                  </div>
+                </div>
+            </details>
+            <p>UsePFrames: {{msi.UsePFrames}}</p>
+          </div>
+        </details>
+        <details>
+          <summary class="Header"><h4>RootSecurityObject:</h4></summary>
+            <div class="values">
+              <details>
+                <summary class="insideHeader"><p>[ ChildChannels ]:</p></summary>
+                <div class="values" *ngFor="let item of modRso.ChildChannels; let key = index">
+                    <p>{{key}}</p>
+                </div>
+              </details>
+              <details>
+                <summary class="insideHeader"><p>[ ChildSecObjects ]:</p></summary>
+                  <div class="values" *ngFor="let item of modRso.ChildSecObjects; let key = index">
+                      <p>{{key}}:</p>
+                        <div class="values">
+                          <details>
+                            <summary class="insideHeader"><p>[ ChildChannels ]:</p></summary>
+                              <div class="values" *ngFor="let item2 of item.ChildChannels; let key = index">
+                                <p>{{key}}: {{item2.Id}} - {{item2.Name}}</p>
+                              </div>
+                          </details>
+                          <details>
+                            <summary class="insideHeader"><p>[ ChildSecObjects ]:</p></summary>
+                              <div class="values" *ngFor="let item2 of item.ChildSecObjects; let key = index">
+                              </div>
+                          </details>
+                          <p>Id: {{item.Id}}</p>
+                          <p>Name: {{item.Name}}</p>
+                        </div>
+                  </div>
+                </details>
+                <p>Id: {{modRso.Id}}</p>
+                <p>Name: {{modRso.Name}}</p>
+
+            </div>
+        </details>
+        <details>
+          <summary class="Header"><h4>RtspServerInfo:</h4></summary>
+            <div class="values">
+              <p>IsEnabled: {{rsi.IsEnabled}}<p>
+              <p>IsMjpegEnabled: {{rsi.IsMjpegEnabled}}<p>
+              <p>TcpPort: {{rsi.TcpPort}}<p>
+            </div>
+        </details>
+        <details>
+          <summary class="Header"><h4>UserGroup:</h4></summary>
+            <div class="values">
+              <p>CanAccessArchiveMarks: {{usGroup.CanAccessArchiveMarks}}</p>
+              <p>CanAccessEditingAnalystPluginsInClient: {{usGroup.CanAccessEditingAnalystPluginsInClient}}</p>
+              <p>CanAccessExpertMode: {{usGroup.CanAccessExpertMode}}</p>
+              <p>CanAccessGis: {{usGroup.CanAccessGis}}</p>
+              <p>CanAccessNewCamera: {{usGroup.CanAccessNewCamera}}</p>
+              <p>CanAccessPlans: {{usGroup.CanAccessPlans}}</p>
+              <p>CanAccessReports: {{usGroup.CanAccessReports}}</p>
+              <p>CanAccessSearch: {{usGroup.CanAccessSearch}}</p>
+              <p>CanAccessToAllUsersInUnifiedLog: {{usGroup.CanAccessToAllUsersInUnifiedLog}}</p>
+              <p>CanAccessUnifiedLog: {{usGroup.CanAccessUnifiedLog}}</p>
+              <p>CanAccessVideoViaSmartTV: {{usGroup.CanAccessVideoViaSmartTV}}</p>
+              <p>CanAccessVideoViaWeb: {{usGroup.CanAccessVideoViaWeb}}</p>
+              <p>CanBrowsingVideowall: {{usGroup.CanBrowsingVideowall}}</p>
+              <p>CanChangeChannelMode: {{usGroup.CanChangeChannelMode}}</p>
+              <p>CanChangePassword: {{usGroup.CanChangePassword}}</p>
+              <p>CanConfigure: {{usGroup.CanConfigure}}</p>
+              <p>CanConfigureVideowall: {{usGroup.CanConfigureVideowall}}</p>
+              <p>CanConfigureWorkplace: {{usGroup.CanConfigureWorkplace}}</p>
+              <p>CanExportVideoToAvi: {{usGroup.CanExportVideoToAvi}}</p>
+              <p>CanGetTranscodedVideoFromMobileServer: {{usGroup.CanGetTranscodedVideoFromMobileServer}}</p>
+              <p>CanManageRec: {{usGroup.CanManageRec}}</p>
+              <p>CanPTZ: {{usGroup.CanPTZ}}</p>
+              <p>CanReceiveMainStream: {{usGroup.CanReceiveMainStream}}</p>
+              <p>CanReceiveMobilePush: {{usGroup.CanReceiveMobilePush}}</p>
+              <p>CanReceiveSound: {{usGroup.CanReceiveSound}}</p>
+              <p>CanRunUserScenarios: {{usGroup.CanRunUserScenarios}}</p>
+              <p>CanShutdown: {{usGroup.CanShutdown}}</p>
+              <p>CanTransmitSound: {{usGroup.CanTransmitSound}}</p>
+              <p>CanUseArchiveExport: {{usGroup.CanUseArchiveExport}}</p>
+              <p>Comment: {{usGroup.Comment}}</p>
+              <details>
+                <summary class="insideHeader"><p>[ GridTypesAllowed ]:</p></summary>
+                  <div class="values" *ngFor="let item of usGroup.GridTypesAllowed; let key = index">
+                    <p>{{key}}: {{item}}</p>
+                  </div>
+              </details>
+              <p>Id: {{usGroup.Id}}</p>
+              <p>IsAllForbidden: {{usGroup.IsAllForbidden}}</p>
+              <p>MessengerCanReceiveMessages: {{usGroup.MessengerCanReceiveMessages}}</p>
+              <p>MessengerCanSendMessages: {{usGroup.MessengerCanSendMessages}}</p>
+              <p>Name: {{usGroup.Name}}</p>
+              <p>PtzPriority: {{usGroup.PtzPriority}}</p>
+            </div>
+        </details>
+      </div>
+    </div>
+</div>

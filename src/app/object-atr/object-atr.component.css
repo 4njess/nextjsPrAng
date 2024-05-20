@@ -1,0 +1,42 @@
+.values{
+  margin-left: 5%;
+}
+.Header{
+  font-weight: 700;
+  cursor: pointer;
+}
+.Header:hover{
+  text-decoration: underline 2px solid;
+
+}
+.sections{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.insideHeader{
+  margin-bottom: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.insideHeader:hover{
+  text-decoration: underline 2px solid;
+}
+.insideHeader::after{
+  margin-bottom: 0px;
+}
+summary::marker{
+  content: "";
+}
+details{
+  margin-bottom: -30px;
+}
+details[open]{
+  margin-bottom: 0px;
+  margin: 0;
+}
+
+.sectionB{
+  margin-left: 20%;
+}

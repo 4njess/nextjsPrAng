@@ -1,0 +1,6 @@
+.values{
+  margin-left: 5%;
+}
+span[data="false"]{
+  color: rebeccapurple;
+}
